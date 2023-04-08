@@ -1,8 +1,9 @@
 ![image](https://user-images.githubusercontent.com/109401839/230745596-57cee9bd-687c-427d-b0db-d1080df77f7e.png)
 
 <h1>Azure Preparation </h1>
-<b/> We will create our **Subcription and Resources** , then go over **Failed Authentication and Log Observation** , and finally
-**Azure Active Directory Overview (Users, Groups, and Access Management)** <br />
+
+<h1/> We will create our *Subcription and Resources, then go over *Failed Authentication and Log Observation , and finally
+*Azure Active Directory Overview (Users, Groups, and Access Management)** <h1/>
 
 ---
 
@@ -33,9 +34,10 @@
 
 
 ---
+<h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
   
-<H2>Precursor to Security Operations (Failed Authentication and Log Observation)<H2>
-  
+<h3/>Steps<h3/>
+
 - Admin Mode (pretend you are normal admin):
 - Create another Windows VM in a region outside the US and NAME IT “attack-vm”
 - Name the Resource Group RG-Cyber-Lab-Attacker
@@ -57,8 +59,7 @@
 - From your own computer, RDP back into “windows-vm”
 - Inspect the failures and successes (Security Log for RDP, Application Log for SQL)
 - Take note of the EventIDs, messaging, Source IP Addresses, etc.
-
-  ---
+---
   
   *Welcome to Cybersecurity* your journey starts here! 
 
