@@ -1,17 +1,22 @@
 ![image](https://user-images.githubusercontent.com/109401839/230745596-57cee9bd-687c-427d-b0db-d1080df77f7e.png)
 
 <h1>Azure Preparation </h1>
-<b/> We will create our Subcription and resources, then go over Failed Authentication and Log Observation, and finally Azure Active Directory(AD)  <br />
+<b/> We will create our **Subcription and Resources** , then go over **Failed Authentication and Log Observation** , and finally
+**Azure Active Directory Overview (Users, Groups, and Access Management)** <br />
 
-<h2>Environments and Technologies Used</h2>
+---
+
+<h2> Subscriptions and Resources<h2>
+
+<h3>Environments and Technologies Used</h3>
 
 - Microsoft Azure
 
-<h2>Operating Systems Used </h2>
+<h3>Operating Systems Used </h3>
 
 - VM Windows 10 (21H2)
 
-<h2>Actions and Observations</h2>
+<h3>Actions and Observations</h3>
 
 - Create Windows 10 Pro Virtual Machine
 - Name the Resource Group: RG-Cyber-Lab
