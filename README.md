@@ -2,12 +2,8 @@
 
 <h1>Azure Preparation </h1>
 
-<h1/> We will create our *Subcription and Resources, then go over *Failed Authentication and Log Observation , and finally
-*Azure Active Directory Overview (Users, Groups, and Access Management)** <h1/>
-
----
-
-<h2> Subscriptions and Resources<h2>
+<h1/> We will create our Subcription and Resources, then go over Failed Authentication and Log Observation , and finally
+Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 <h3>Environments and Technologies Used</h3>
 
@@ -16,6 +12,10 @@
 <h3>Operating Systems Used </h3>
 
 - VM Windows 10 (21H2)
+
+---
+
+<h2> Subscriptions and Resources<h2>
 
 <h3>Actions and Observations</h3>
 
@@ -32,11 +32,11 @@
 - Test SQL logging to make sure it’s working properly
 
 
-
 ---
+
 <h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
   
-<h3/>Steps<h3/>
+<h3>Actions and Observations</h3>
 
 - Admin Mode (pretend you are normal admin):
 - Create another Windows VM in a region outside the US and NAME IT “attack-vm”
@@ -59,7 +59,33 @@
 - From your own computer, RDP back into “windows-vm”
 - Inspect the failures and successes (Security Log for RDP, Application Log for SQL)
 - Take note of the EventIDs, messaging, Source IP Addresses, etc.
+
 ---
-  
+
+<h2/>Azure Active Directory Overview (Users, Groups, and Access Management)<h2/>
+
+<h3>Actions and Observations</h3>
+
+- Configure and Observe Tenant-Level Global Reader
+- Create a user within Azure Active Directory (AAD) (username: globalreaderjohn)
+- Assign Tenant-Level Global Reader
+- In a new browser/incognito, log in as globalreaderjohn and observe result of being a Tenant Level “Global Reader”
+- Close browser/incognito when satisfied
+
+- Configure and Observer Subscription Reader
+- Back in main browser, create another user within AAD  (username: subreaderjane)
+- Assign Subscription-Level Reader 
+- In a new browser/incognito, log in as subreaderjane and observe result of being a Subscription Level “Global Reader”
+- Close browser/incognito when satisfied
+
+- Configure and Observe Resource Group Contributor (like an admin)
+- Back in main browser, create another user within AAD  (username: rgcontributordave)
+- Create a new resource group called “Permissions-Tester”
+- Assign Resource Group-level Contributor
+- For our resource group (RG-Cyber-Lab), assign Contributor Permissions
+- In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader
+- Observe the result of being a Resource Group Level Contributor
+
+
   *Welcome to Cybersecurity* your journey starts here! 
 
