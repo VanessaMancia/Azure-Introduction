@@ -136,6 +136,11 @@ Now, Intentionally enter the wrong user name and password to do a failed login a
 
 - Test SQL logging to make sure it’s working properly
 
+Enter Event Viewer, Select Application, and View SQL Management Logs Entries: 
+
+![image](https://user-images.githubusercontent.com/109401839/230749908-b20fe934-00b7-498a-a8f6-1f9554e38aed.png)
+
+Here we can see the failed login attempt and the reason. That concludes the first lab. 
 
 ---
 
