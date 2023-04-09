@@ -43,12 +43,27 @@ Create Inbound Security Rule , Any, Name it "DangerAllInBound"
 
 ![nsg danger inbound](https://user-images.githubusercontent.com/109401839/230748062-20cb8a7d-768c-4d8b-b548-dad98fdef095.png)
 
-Now try to ping the IP Address of the VM...
+Now try to ping the IP Address of the VM in CMD...
 Did it work? 
 
 ![ping](https://i.imgur.com/ZnVQuDB.png)
 
 No it didnt because we need to remote in, and change the firewall setting within the VM as well. 
+
+Now remote in, on Windows 10 we will use  "Remote Desktop Connection" 
+
+![e](https://i.imgur.com/8RQ9xpu.png)
+
+Once you are logged in, search "wf.msc" in the start menu to execute the program "Windows Defender Firewall Advanced Security.
+Click on "Windows Defender Firewall Properties" 
+On each tab, turn off the "Firewall State" 
+Ignore IPSEC Settings for now.
+
+![3](https://i.imgur.com/pBzKoId.png)
+
+Now observe the changes in CMD: 
+
+![image](https://user-images.githubusercontent.com/109401839/230748490-8588cf7e-e3b4-4739-befd-f4695ba665ce.png)
 
 - Install SQL Server and Create Vulnerabilities
 - Remote Into the VM
