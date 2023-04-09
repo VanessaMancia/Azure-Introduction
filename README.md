@@ -122,7 +122,7 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 Copy
 
-'''auditpol /set /subcategory:"application generated" /success:enable /failure:enable'''
+```auditpol /set /subcategory:"application generated" /success:enable /failure:enable```
 
 - Close the command prompt window.
 
