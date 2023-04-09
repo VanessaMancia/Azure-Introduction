@@ -218,5 +218,6 @@ We then go to event viewer and see all the failed login attempts
 - Observe the result of being a Resource Group Level Contributor
 
 
-  *Welcome to Cybersecurity* your journey starts here! 
+  *Welcome to Cybersecurity*, your journey starts here! 
+On our next set of [labs](https://github.com/fnabeel/Logging-and-Monitoring), we woll go over Logging and Monitoring. 
 
