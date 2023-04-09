@@ -195,13 +195,13 @@ Enter the wrong password 5 times
 ![image](https://user-images.githubusercontent.com/112146207/230792205-ad1cf545-267b-43ea-9bf0-8ecb72dde3ef.png)
 
 
+Log out of the attack-VM, and now we are back into our own computer. 
+From our own computer we will RDP back into our windows-vm. 
+We will inspect the failures and successes (Security log for RDP, Application log for SQL).
+It's important to also take note of EventIDs, messaging, source IP Addresses etc..
 
-- Log out of “attack-vm”, now you are back to your own computer
+ ![uuu](https://user-images.githubusercontent.com/112146207/230796726-abf6a180-56d0-4428-9952-8eee097c8147.png)
 
-- Admin Mode (pretend you are normal admin):
-- From your own computer, RDP back into “windows-vm”
-- Inspect the failures and successes (Security Log for RDP, Application Log for SQL)
-- Take note of the EventIDs, messaging, Source IP Addresses, etc.
 
 <div>
 <h2/>Azure Active Directory Overview (Users, Groups, and Access Management)<h2/>
