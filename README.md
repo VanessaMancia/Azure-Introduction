@@ -105,6 +105,8 @@ Next we will download [Server Management Studio](https://learn.microsoft.com/en-
 
 [Configure](https://learn.microsoft.com/en-us/sql/relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log?view=sql-server-ver16) the audit object access setting in Windows using auditpol
 
+- Enable logging for SQL Server to be ported into Windows Event Viewer 
+
 Open a command prompt with administrative permissions.
 
 From the Start menu, navigate to Command Prompt, and then select Run as administrator.
@@ -119,8 +121,19 @@ Copy
 '''auditpol /set /subcategory:"application generated" /success:enable /failure:enable'''
 Close the command prompt window.
 
+![2](https://i.imgur.com/LCjKjIg.png)
 
-- Enable logging for SQL Server to be ported into Windows Event Viewer 
+Now RegEdit and explore:
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security
+
+![image](https://user-images.githubusercontent.com/109401839/230749756-e9139c85-9cd7-4756-a400-307b02a4c81a.png)
+
+Restart SQL Management, Disconnect Connection, Reconnect, and Choose SQL Managements Authentication Method. 
+
+Now, Intentionally enter the wrong user name and password to do a failed login attempt. 
+
+![image](https://user-images.githubusercontent.com/109401839/230749821-c108d8bb-e77e-4826-9b93-0a6f2afde4f4.png)
+
 - Test SQL logging to make sure it’s working properly
 
 
