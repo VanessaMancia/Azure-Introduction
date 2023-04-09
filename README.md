@@ -206,6 +206,8 @@ The ultimate goal of this lab is to differentiate between false negatives, false
 
 ---
 
+---
+
 </summary>
 
 ![Untitled](https://user-images.githubusercontent.com/109401839/230747442-f0a1831d-1cf0-4895-b335-372314cd5d51.png)
@@ -227,20 +229,70 @@ Then we will select the auto password generate option, Maxo1396"
 
 ![msedge_Y3BrhP8v9T](https://user-images.githubusercontent.com/109401839/230799861-29ebd5fd-4b1d-445f-a9da-abfd1056a726.png)
 
+Be sure to copy your user's "User Principal Name" ,  for us that is ```globalreaderjohn@fnabeelpm.onmicrosoft.com```
+
 - In a new browser/incognito, log in as globalreaderjohn and observe result of being a Tenant Level “Global Reader”
 
- 
+ [Log into Azure](http://portal.azure.com/) 
+
+![msedge_HqzxFbf0iN](https://user-images.githubusercontent.com/109401839/230799958-e166ab3b-f43a-4ffc-9042-c836cf5c3ec2.png)
+
+ Azure will prompt you to change your auto-generated password, for us we changed it to ```LabTest123456``` , feel free to use anything but be sure to remember it. 
+
+Once you are logged into Azure, notice you can not see anything in your subscription page, however you are able to view all avaialble users. 
+
+Due to your role, as Global Reader. I can view users overview, however I am not able to make changes or reset passwords. 
+
+![image](https://user-images.githubusercontent.com/109401839/230800090-ab7e025f-079f-41f5-a8f4-10cf7dbd5676.png)
+
+This is because we have given RBAC (Role-Based Access Control) and enforced Least Priviledges so John can only do his job, Read. 
+
 - Close browser/incognito when satisfied
 
-- Configure and Observer Subscription Reader
 - Back in main browser, create another user within AAD  (username: subreaderjane)
+
+- Configure and Observer Subscription Reader
+
+- Auto-generated password, ```Qudo6437```  
+
+![msedge_JftbufmM3X](https://user-images.githubusercontent.com/109401839/230800294-58e9a6f0-984e-435a-8db1-41a5cbbd8523.png)
+
 - Assign Subscription-Level Reader 
+
+This maybe called something different for you, for me ```Azure subscription 1``` and you can find this under ```Subscriptions```. 
+
+Now, Enter the Access Control (IAM) and give Jane her deserved role. 
+
+![image](https://user-images.githubusercontent.com/109401839/230800962-a70cbdaf-c686-41ec-9313-f8dc9cb0fd9e.png)
+
+![msedge_UUzHPizmTA](https://user-images.githubusercontent.com/109401839/230800551-c809f8b7-975f-4a3b-8761-ef7e7c6fe5fb.png)
+
 - In a new browser/incognito, log in as subreaderjane and observe result of being a Subscription Level “Global Reader”
+
+Again, you will be prompted to change your password, document it. 
+
+Go to resource groups and notice you are able to see the resources in there and even under subscriptions. 
+
+Lets try to delete a resource group now, we should not be able to do so... 
+
+![image](https://user-images.githubusercontent.com/109401839/230801715-c9537447-9f66-4f22-8d33-19eab3074bd2.png)
+
+Did it delete? YIKES.
+
+![image](https://user-images.githubusercontent.com/109401839/230801752-80f0c485-cf6b-40d5-ac6d-de5b9cedf301.png)
+
+It did not delete ! Jane does not have the priveldges to create or delete. Only a subscription level reader. We can not actually change anything. 
+
 - Close browser/incognito when satisfied
 
 - Configure and Observe Resource Group Contributor (like an admin)
+
 - Back in main browser, create another user within AAD  (username: rgcontributordave)
+
+Auto-generated password ```Fayo1701```
+
 - Create a new resource group called “Permissions-Tester”
+
 - Assign Resource Group-level Contributor
 - For our resource group (RG-Cyber-Lab), assign Contributor Permissions
 - In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader
