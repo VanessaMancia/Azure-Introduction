@@ -225,6 +225,8 @@ Then we will select the auto password generate option, Maxo1396"
 
 ![image](https://user-images.githubusercontent.com/109401839/230799619-da680846-c56a-479a-b215-ab5758f49b50.png)
 
+![msedge_Y3BrhP8v9T](https://user-images.githubusercontent.com/109401839/230799861-29ebd5fd-4b1d-445f-a9da-abfd1056a726.png)
+
 - In a new browser/incognito, log in as globalreaderjohn and observe result of being a Tenant Level “Global Reader”
 
  
