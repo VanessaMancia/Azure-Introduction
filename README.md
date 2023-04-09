@@ -183,13 +183,12 @@ We then go to event viewer and see all the failed login attempts
 
 ![image](https://user-images.githubusercontent.com/112146207/230790854-d6bd81a6-4629-4a4d-ab39-681c7b013451.png)
 
+After this we will install SSMS within attack-VM and generate some failed MS SQL Auth logs against windows-VM.
+Enter the wrong password 5 times
+![image](https://user-images.githubusercontent.com/112146207/230792205-ad1cf545-267b-43ea-9bf0-8ecb72dde3ef.png)
 
-- Finally, from “attack-vm”, actually log into “windows-vm” with the correct username and password.
 
 
-- Generated some failed MS SQL Auth logs against “windows-vm”
-- Still within “attack-vm”, install SSMS if not already installed
-- Attempt to connect to the SQL Server on “windows-vm” with a bad password
 - Log out of “attack-vm”, now you are back to your own computer
 
 - Admin Mode (pretend you are normal admin):
