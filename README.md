@@ -5,6 +5,14 @@
 <h1/> We will create our Subcription and Resources, then go over Failed Authentication and Log Observation , and finally
 Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
+---
+
+**Jump to:** [Resources & SQL Server Vulnerabilties](#1) | 
+
+---
+
+
+
 <h3>Environments and Technologies Used</h3>
 
 - Microsoft Azure
@@ -13,6 +21,7 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 - VM Windows 10 (21H2)
 
+###1
 <div>
 <h2>Resources & SQL Server Vulnerabilties<h2>
 <details close>
