@@ -100,6 +100,25 @@ Next we will download [Server Management Studio](https://learn.microsoft.com/en-
 
 ![image](https://user-images.githubusercontent.com/109401839/230749437-dfc8f934-0360-4bc8-949f-a99371c0ba40.png)
 
+![image](https://user-images.githubusercontent.com/109401839/230749591-15fffab9-3651-418b-8694-bd763492a9fb.png)
+
+
+[Configure](https://learn.microsoft.com/en-us/sql/relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log?view=sql-server-ver16) the audit object access setting in Windows using auditpol
+
+Open a command prompt with administrative permissions.
+
+From the Start menu, navigate to Command Prompt, and then select Run as administrator.
+
+If the User Account Control dialog box opens, select Continue.
+
+Execute the following statement to enable auditing from SQL Server.
+
+Windows Command Prompt
+
+Copy
+'''auditpol /set /subcategory:"application generated" /success:enable /failure:enable'''
+Close the command prompt window.
+
 
 - Enable logging for SQL Server to be ported into Windows Event Viewer 
 - Test SQL logging to make sure it’s working properly
