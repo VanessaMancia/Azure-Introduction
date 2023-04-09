@@ -145,21 +145,39 @@ Here we can see the failed login attempt and the reason. That concludes the firs
 ---
 
 <h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
+
+We will create a VM in the cloud that will be our target of attack, and we will observe logs and see what they look like. 
+The ultimate goal of this lab is to differentiate between false negatives, false positives, true positives, and true negatives. 
   
 <h3>Actions and Observations</h3>
 
-- Admin Mode (pretend you are normal admin):
-- Create another Windows VM in a region outside the US and NAME IT “attack-vm”
-- Name the Resource Group RG-Cyber-Lab-Attacker
-- Name the VNet Lab-VNet-Attacker
-- Log into the VM to make sure it works
-- Retrieve the public IP address of “windows-vm” from the Azure Portal, save it for the next steps
+We are creating an attack vm the goal is to have a different region so it looks like a threat is attacking our previous vm. 
 
-- Attacker Mode (pretend you are an attacker):
-- Generated some failed RDP logs against “windows-vm”
-- From within of “attack-vm”, attempt to RDP into “windows-vm” with the wrong credentials
-- Repeat this step 5 times with the wrong username and password
+![OUTSIDE](https://user-images.githubusercontent.com/112146207/230785143-b12ea9d9-8f3d-4fca-a73b-3d54374c3611.png)
+
+
+```Now we have to name the VNet Lab-VNet-Attacker```
+
+![image](https://user-images.githubusercontent.com/112146207/230785775-a4c5d027-71cd-4341-8927-faa552ff0cd4.png)
+
+First thing we will do is get the attack-VM public IP adddress. Then go to remote desktop connection and enter in your attack VM information. 
+
+![image](https://user-images.githubusercontent.com/112146207/230786468-787b9479-4b0b-42b4-beb0-f627f6c02125.png)
+
+- Get the windows-vm ```public IP address```` and go to RDP and from there go to the start menu and search remote desktop and enter the ``` IP address ```. 
+- We will now generate some failed RDP (remote desktop protocol) logs against the windows-vm from the attacker vm. 
+- We will attempt this 5 times with the wrong username and password.
+
+![image](https://user-images.githubusercontent.com/112146207/230787466-11cc67e0-4833-4a61-a7b3-f6d250abf75e.png)
+
+We then go to event viewer and see all the failed login attempts
+
+![image](https://user-images.githubusercontent.com/112146207/230790854-d6bd81a6-4629-4a4d-ab39-681c7b013451.png)
+
+
 - Finally, from “attack-vm”, actually log into “windows-vm” with the correct username and password.
+
+
 - Generated some failed MS SQL Auth logs against “windows-vm”
 - Still within “attack-vm”, install SSMS if not already installed
 - Attempt to connect to the SQL Server on “windows-vm” with a bad password
