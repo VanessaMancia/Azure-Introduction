@@ -5,14 +5,6 @@
 <h1/> We will create our Subcription and Resources, then go over Failed Authentication and Log Observation , and finally
 Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
----
-
-**Jump to:** [Resources & SQL Server Vulnerabilties](#1) | 
-
----
-
-
-
 <h3>Environments and Technologies Used</h3>
 
 - Microsoft Azure
@@ -21,7 +13,6 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 - VM Windows 10 (21H2)
 
-###1
 <div>
 <h2>Resources & SQL Server Vulnerabilties<h2>
 <details close>
@@ -31,7 +22,7 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 </summary>
 <h3>Actions and Observations</h3>
 
-- ```Create Windows 10 Pro Virtual Machine```
+- Create Windows 10 Pro Virtual Machine
 - Name the Resource Group: RG-Cyber-Lab
 
 ![gtxtw3z5](https://user-images.githubusercontent.com/109401839/230747447-40c9b360-38e2-4d8d-b4b2-7ea0bb12ae0f.png)
@@ -40,44 +31,44 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 ![hjl0rzkf](https://user-images.githubusercontent.com/109401839/230747449-be2118b3-a451-4d32-a756-d4082055ae31.png)
 
-Now, double check the VM settings and create ! 
+- Now, double check the VM settings and create ! 
 
 ![image](https://user-images.githubusercontent.com/109401839/230747537-211a32a7-9525-4572-a455-0a250278c604.png)
 
 - Configure Network Security Group (Layer 4 Firewall) to allow all traffic inbound
 
-A mini firewall that will be configured for our virutal machine to allow all traffic in. We want to make this firewall look enticing to allow threat actors such as hackers, bots , and attackers to try to get into our virtual machine. 
+- A mini firewall that will be configured for our virutal machine to allow all traffic in. We want to make this firewall look enticing to allow threat actors such as hackers, bots , and attackers to try to get into our virtual machine. 
 
-In resource groups, we will go inside it, we can see all the things associated with the VM being created. 
-We will edit, the network security group, either by search or in the resource groups. 
-Based on the traffic coming into the network we can see the priorty categorised in Azzure based on the set rules/protocols. 
-Create Inbound Security Rule , Any, Name it "DangerAllInBound" 
+- In resource groups, we will go inside it, we can see all the things associated with the VM being created. 
+- We will edit, the network security group, either by search or in the resource groups. 
+- Based on the traffic coming into the network we can see the priorty categorised in Azzure based on the set rules/protocols. 
+- Create Inbound Security Rule , Any, Name it "DangerAllInBound" 
 
 ![nsg danger inbound](https://user-images.githubusercontent.com/109401839/230748062-20cb8a7d-768c-4d8b-b548-dad98fdef095.png)
 
-Now try to ping the IP Address of the VM in CMD...
-Did it work? 
+- Now try to ping the IP Address of the VM in CMD...
+- Did it work? 
 
 ![ping](https://i.imgur.com/ZnVQuDB.png)
 
-No it didnt because we need to remote in, and change the firewall setting within the VM as well. 
+- No it didnt because we need to remote in, and change the firewall setting within the VM as well. 
 
 - Remote Into the VM
 
-Now remote in, on Windows 10 we will use  "Remote Desktop Connection" 
+- Now remote in, on Windows 10 we will use  "Remote Desktop Connection" 
 
 ![e](https://i.imgur.com/8RQ9xpu.png)
 
 - Turn off Windows Firewall
  
-Once you are logged in, search "wf.msc" in the start menu to execute the program "Windows Defender Firewall Advanced Security.
-Click on "Windows Defender Firewall Properties" 
-On each tab, turn off the "Firewall State" 
-Ignore IPSEC Settings for now.
+- Once you are logged in, search "wf.msc" in the start menu to execute the program "Windows Defender Firewall Advanced Security.
+- Click on "Windows Defender Firewall Properties" 
+- On each tab, turn off the "Firewall State" 
+- Ignore IPSEC Settings for now.
 
 ![3](https://i.imgur.com/pBzKoId.png)
 
-Now observe the changes in CMD: 
+- Now observe the changes in CMD: 
 
 ![image](https://user-images.githubusercontent.com/109401839/230748490-8588cf7e-e3b4-4739-befd-f4695ba665ce.png)
 
@@ -86,9 +77,9 @@ Now observe the changes in CMD:
 
 [Download here](https://www.microsoft.com/en-us/evalcenter/download-sql-server-2022)
 
-Install .exe file, Download Media, ISO option, Open Folder, and Mount Media
+- Install .exe file, Download Media, ISO option, Open Folder, and Mount Media
 
-It will show as a disk file under "This PC" side panel: 
+- It will show as a disk file under "This PC" side panel: 
 
 ![image](https://user-images.githubusercontent.com/109401839/230748771-4fd4e778-626d-4baa-8403-b1acf1389bdb.png)
 
@@ -102,13 +93,13 @@ It will show as a disk file under "This PC" side panel:
 
 ![mstsc_sGtz3qU3M2](https://user-images.githubusercontent.com/109401839/230749062-0bd9eaeb-9c0d-43c2-93a5-c9641bf2285e.png)
 
-''' Select "Mixed Mode", this is important becayse with Windows Authentication Mode, we will only be able to login with an online acount, where as with a mixed mode, we can login online and locally into the SQL Server. '''
+- Select "Mixed Mode", this is important becayse with Windows Authentication Mode, we will only be able to login with an online acount, where as with a mixed mode, we can login online and locally into the SQL Server.
 
-Add current user, and enter your password. 
+- Add current user, and enter your password. 
 
-Now Finish Install ! Now we can connect to our SQL Database.  
+- Now Finish Install ! Now we can connect to our SQL Database.  
 
-Next we will download [Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
+- Next we will download [Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
 ![image](https://user-images.githubusercontent.com/109401839/230749437-dfc8f934-0360-4bc8-949f-a99371c0ba40.png)
 
@@ -119,40 +110,43 @@ Next we will download [Server Management Studio](https://learn.microsoft.com/en-
 
 - Enable logging for SQL Server to be ported into Windows Event Viewer 
 
-Open a command prompt with administrative permissions.
+- Open a command prompt with administrative permissions.
 
-From the Start menu, navigate to Command Prompt, and then select Run as administrator.
+- From the Start menu, navigate to Command Prompt, and then select Run as administrator.
 
-If the User Account Control dialog box opens, select Continue.
+- If the User Account Control dialog box opens, select Continue.
 
-Execute the following statement to enable auditing from SQL Server.
+- Execute the following statement to enable auditing from SQL Server.
 
-Windows Command Prompt
+- Windows Command Prompt
 
 Copy
+
 '''auditpol /set /subcategory:"application generated" /success:enable /failure:enable'''
-Close the command prompt window.
+
+- Close the command prompt window.
 
 ![2](https://i.imgur.com/LCjKjIg.png)
 
-Now RegEdit and explore:
+- Now RegEdit and explore:
+
  ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security```
 
 ![image](https://user-images.githubusercontent.com/109401839/230749756-e9139c85-9cd7-4756-a400-307b02a4c81a.png)
 
-Restart SQL Management, Disconnect Connection, Reconnect, and Choose SQL Managements Authentication Method. 
+- Restart SQL Management, Disconnect Connection, Reconnect, and Choose SQL Managements Authentication Method. 
 
-Now, Intentionally enter the wrong user name and password to do a failed login attempt. 
+- Now, Intentionally enter the wrong user name and password to do a failed login attempt. 
 
 ![image](https://user-images.githubusercontent.com/109401839/230749821-c108d8bb-e77e-4826-9b93-0a6f2afde4f4.png)
 
 - Test SQL logging to make sure it’s working properly
 
-Enter Event Viewer, Select Application, and View SQL Management Logs Entries: 
+- Enter Event Viewer, Select Application, and View SQL Management Logs Entries: 
 
 ![image](https://user-images.githubusercontent.com/109401839/230749908-b20fe934-00b7-498a-a8f6-1f9554e38aed.png)
 
-Here we can see the failed login attempt and the reason. That concludes the first lab. 
+- Here we can see the failed login attempt and the reason. That concludes the first lab. 
 
 
 <div>
@@ -167,7 +161,7 @@ The ultimate goal of this lab is to differentiate between false negatives, false
   
 <h3>Actions and Observations</h3>
 
-We are creating an attack vm the goal is to have a different region so it looks like a threat is attacking our previous vm. 
+- We are creating an attack vm the goal is to have a different region so it looks like a threat is attacking our previous vm. 
 
 ![OUTSIDE](https://user-images.githubusercontent.com/112146207/230785143-b12ea9d9-8f3d-4fca-a73b-3d54374c3611.png)
 
@@ -176,7 +170,7 @@ We are creating an attack vm the goal is to have a different region so it looks 
 
 ![image](https://user-images.githubusercontent.com/112146207/230785775-a4c5d027-71cd-4341-8927-faa552ff0cd4.png)
 
-First thing we will do is get the attack-VM public IP adddress. Then go to remote desktop connection and enter in your attack VM information. 
+- First thing we will do is get the attack-VM public IP adddress. Then go to remote desktop connection and enter in your attack VM information. 
 
 ![image](https://user-images.githubusercontent.com/112146207/230786468-787b9479-4b0b-42b4-beb0-f627f6c02125.png)
 
@@ -186,22 +180,21 @@ First thing we will do is get the attack-VM public IP adddress. Then go to remot
 
 ![image](https://user-images.githubusercontent.com/112146207/230787466-11cc67e0-4833-4a61-a7b3-f6d250abf75e.png)
 
-We then go to event viewer and see all the failed login attempts
+- We then go to event viewer and see all the failed login attempts
 
 ![image](https://user-images.githubusercontent.com/112146207/230790854-d6bd81a6-4629-4a4d-ab39-681c7b013451.png)
 
-After this we will install SSMS within attack-VM and generate some failed MS SQL Auth logs against windows-VM.
-Enter the wrong password 5 times
+- After this we will install SSMS within attack-VM and generate some failed MS SQL Auth logs against windows-VM.
+- Enter the wrong password 5 times
+
 ![image](https://user-images.githubusercontent.com/112146207/230792205-ad1cf545-267b-43ea-9bf0-8ecb72dde3ef.png)
 
-
-Log out of the attack-VM, and now we are back into our own computer. 
-From our own computer we will RDP back into our windows-vm. 
-We will inspect the failures and successes (Security log for RDP, Application log for SQL).
-It's important to also take note of EventIDs, messaging, source IP Addresses etc..
+- Log out of the attack-VM, and now we are back into our own computer. 
+- From our own computer we will RDP back into our windows-vm. 
+- We will inspect the failures and successes (Security log for RDP, Application log for SQL).
+- It's important to also take note of EventIDs, messaging, source IP Addresses etc..
 
  ![uuu](https://user-images.githubusercontent.com/112146207/230796726-abf6a180-56d0-4428-9952-8eee097c8147.png)
-
 
 <div>
 <h2/>Azure Active Directory Overview (Users, Groups, and Access Management)<h2/>
