@@ -34,7 +34,7 @@ Now, double check the VM settings and create !
 
 - Configure Network Security Group (Layer 4 Firewall) to allow all traffic inbound
 
-A mini firewall that will be configured for our virutal machine to allow all traffic in. We want to make this firewall look enticing to allow threat actors such as hackers, bots , nd attackers to try to get into our virtual machine. 
+A mini firewall that will be configured for our virutal machine to allow all traffic in. We want to make this firewall look enticing to allow threat actors such as hackers, bots , and attackers to try to get into our virtual machine. 
 
 In resource groups, we will go inside it, we can see all the things associated with the VM being created. 
 We will edit, the network security group, either by search or in the resource groups. 
@@ -124,7 +124,7 @@ Close the command prompt window.
 ![2](https://i.imgur.com/LCjKjIg.png)
 
 Now RegEdit and explore:
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security
+ ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security```
 
 ![image](https://user-images.githubusercontent.com/109401839/230749756-e9139c85-9cd7-4756-a400-307b02a4c81a.png)
 
