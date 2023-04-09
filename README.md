@@ -13,10 +13,13 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 - VM Windows 10 (21H2)
 
+<div>
+<h2>Resources & SQL Server Vulnerabilties<h2>
+<details close>
+
 ---
 
 </summary>
-<h2>Resources & SQL Server Vulnerabilties<h2>
 <h3>Actions and Observations</h3>
 
 - ```Create Windows 10 Pro Virtual Machine```
@@ -144,12 +147,13 @@ Here we can see the failed login attempt and the reason. That concludes the firs
 
 
 <div>
+<h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
 <details close>
 
 ---
 
 </summary>
-<h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
+
 
 We will create a VM in the cloud that will be our target of attack, and we will observe logs and see what they look like. 
 The ultimate goal of this lab is to differentiate between false negatives, false positives, true positives, and true negatives. 
@@ -194,12 +198,13 @@ We then go to event viewer and see all the failed login attempts
 - Take note of the EventIDs, messaging, Source IP Addresses, etc.
 
 <div>
+<h2/>Azure Active Directory Overview (Users, Groups, and Access Management)<h2/>
 <details close>
 
 ---
 
 </summary>
-<h2/>Azure Active Directory Overview (Users, Groups, and Access Management)<h2/>
+
 
 ![Untitled](https://user-images.githubusercontent.com/109401839/230747442-f0a1831d-1cf0-4895-b335-372314cd5d51.png)
 
