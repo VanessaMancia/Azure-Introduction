@@ -15,7 +15,7 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 ---
 
-<h2> Subscriptions and Resources<h2>
+<h2>Resources & SQL Server Vulnerabilties<h2>
 
 <h3>Actions and Observations</h3>
 
@@ -33,6 +33,23 @@ Now, double check the VM settings and create !
 ![image](https://user-images.githubusercontent.com/109401839/230747537-211a32a7-9525-4572-a455-0a250278c604.png)
 
 - Configure Network Security Group (Layer 4 Firewall) to allow all traffic inbound
+
+A mini firewall that will be configured for our virutal machine to allow all traffic in. We want to make this firewall look enticing to allow threat actors such as hackers, bots , nd attackers to try to get into our virtual machine. 
+
+In resource groups, we will go inside it, we can see all the things associated with the VM being created. 
+We will edit, the network security group, either by search or in the resource groups. 
+Based on the traffic coming into the network we can see the priorty categorised in Azzure based on the set rules/protocols. 
+Create Inbound Security Rule , Any, Name it "DangerAllInBound" 
+
+![nsg danger inbound](https://user-images.githubusercontent.com/109401839/230748062-20cb8a7d-768c-4d8b-b548-dad98fdef095.png)
+
+Now try to ping the IP Address of the VM...
+Did it work? 
+
+![ping](https://i.imgur.com/ZnVQuDB.png)
+
+No it didnt because we need to remote in, and change the firewall setting within the VM as well. 
+
 - Install SQL Server and Create Vulnerabilities
 - Remote Into the VM
 - Turn off Windows Firewall
