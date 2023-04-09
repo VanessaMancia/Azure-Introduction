@@ -2,10 +2,10 @@
 
 <h1>Azure Preparation </h1>
 
-<h1/> We will create our Subcription and Resources, then go over Failed Authentication and Log Observation , and finally
-Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
+<h3/> We will create our Subcription and Resources, then go over Failed Authentication and Log Observation , and finally
+Azure Active Directory Overview (Users, Groups, and Access Management)<h3/>
 
-<h3>Environments and Technologies Used</h3>
+<b>Environments and Technologies Used<b>
 
 - Microsoft Azure
 
@@ -14,13 +14,16 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 - VM Windows 10 (21H2)
 
 <div>
+
 <h2>Resources & SQL Server Vulnerabilties<h2>
+
 <details close>
 
 ---
 
 </summary>
-<h3>Actions and Observations</h3>
+
+<b>Actions and Observations<b>
 
 - Create Windows 10 Pro Virtual Machine
 - Name the Resource Group: RG-Cyber-Lab
@@ -72,10 +75,9 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 ![image](https://user-images.githubusercontent.com/109401839/230748490-8588cf7e-e3b4-4739-befd-f4695ba665ce.png)
 
-
 - Install SQL Server Evaluation
 
-[Download here](https://www.microsoft.com/en-us/evalcenter/download-sql-server-2022)
+- [Download here](https://www.microsoft.com/en-us/evalcenter/download-sql-server-2022)
 
 - Install .exe file, Download Media, ISO option, Open Folder, and Mount Media
 
@@ -105,7 +107,6 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 ![image](https://user-images.githubusercontent.com/109401839/230749591-15fffab9-3651-418b-8694-bd763492a9fb.png)
 
-
 [Configure](https://learn.microsoft.com/en-us/sql/relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log?view=sql-server-ver16) the audit object access setting in Windows using auditpol
 
 - Enable logging for SQL Server to be ported into Windows Event Viewer 
@@ -120,7 +121,7 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 - Windows Command Prompt
 
-Copy
+- Copy
 
 ```auditpol /set /subcategory:"application generated" /success:enable /failure:enable```
 
@@ -148,23 +149,24 @@ Copy
 
 - Here we can see the failed login attempt and the reason. That concludes the first lab. 
 
-
 <div>
+
 <h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
+
 <details close>
 
 ---
 
 </summary>
+
 We will create a VM in the cloud that will be our target of attack, and we will observe logs and see what they look like. 
 The ultimate goal of this lab is to differentiate between false negatives, false positives, true positives, and true negatives. 
   
-<h3>Actions and Observations</h3>
+<b>Actions and Observations<b>
 
 - We are creating an attack vm the goal is to have a different region so it looks like a threat is attacking our previous vm. 
 
 ![OUTSIDE](https://user-images.githubusercontent.com/112146207/230785143-b12ea9d9-8f3d-4fca-a73b-3d54374c3611.png)
-
 
 ```Now we have to name the VNet Lab-VNet-Attacker```
 
@@ -194,19 +196,21 @@ The ultimate goal of this lab is to differentiate between false negatives, false
 - We will inspect the failures and successes (Security log for RDP, Application log for SQL).
 - It's important to also take note of EventIDs, messaging, source IP Addresses etc..
 
- ![uuu](https://user-images.githubusercontent.com/112146207/230796726-abf6a180-56d0-4428-9952-8eee097c8147.png)
+![uuu](https://user-images.githubusercontent.com/112146207/230796726-abf6a180-56d0-4428-9952-8eee097c8147.png)
 
 <div>
-<h2/>Azure Active Directory Overview (Users, Groups, and Access Management)<h2/>
+
+<h3>Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
+
 <details close>
 
 ---
 
 </summary>
+
 ![Untitled](https://user-images.githubusercontent.com/109401839/230747442-f0a1831d-1cf0-4895-b335-372314cd5d51.png)
 
-
-<h3>Actions and Observations</h3>
+<b>Actions and Observations<b>
 
 - Configure and Observe Tenant-Level Global Reader
 - Create a user within Azure Active Directory (AAD) (username: globalreaderjohn)
