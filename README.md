@@ -213,9 +213,21 @@ The ultimate goal of this lab is to differentiate between false negatives, false
 <b>Actions and Observations<b>
 
 - Configure and Observe Tenant-Level Global Reader
-- Create a user within Azure Active Directory (AAD) (username: globalreaderjohn)
+1. Create user in Active Directory, we will name the user "globalreaderjohn"
+Then we will select the auto password generate option, Maxo1396" 
+```It will be different for you```
+
+![image](https://user-images.githubusercontent.com/109401839/230799438-00d3e9fe-4348-4052-9995-6d6895f6f283.png)
+
+![image](https://user-images.githubusercontent.com/109401839/230799569-fca3562d-15c4-4332-9e30-0e75432e7e96.png)
+
 - Assign Tenant-Level Global Reader
+
+![image](https://user-images.githubusercontent.com/109401839/230799619-da680846-c56a-479a-b215-ab5758f49b50.png)
+
 - In a new browser/incognito, log in as globalreaderjohn and observe result of being a Tenant Level “Global Reader”
+
+ 
 - Close browser/incognito when satisfied
 
 - Configure and Observer Subscription Reader
@@ -232,7 +244,7 @@ The ultimate goal of this lab is to differentiate between false negatives, false
 - In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader
 - Observe the result of being a Resource Group Level Contributor
 
+*Welcome to Cybersecurity*, your journey starts here! 
 
-  *Welcome to Cybersecurity*, your journey starts here! 
 On our next set of [labs](https://github.com/fnabeel/Logging-and-Monitoring), we woll go over Logging and Monitoring. 
 
