@@ -21,7 +21,17 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 
 - Create Windows 10 Pro Virtual Machine
 - Name the Resource Group: RG-Cyber-Lab
+
+![gtxtw3z5](https://user-images.githubusercontent.com/109401839/230747447-40c9b360-38e2-4d8d-b4b2-7ea0bb12ae0f.png)
+
 - Name the Virtual Network. NAME IT “Lab-VNet”
+
+![hjl0rzkf](https://user-images.githubusercontent.com/109401839/230747449-be2118b3-a451-4d32-a756-d4082055ae31.png)
+
+Now, double check the VM settings and create ! 
+
+![image](https://user-images.githubusercontent.com/109401839/230747537-211a32a7-9525-4572-a455-0a250278c604.png)
+
 - Configure Network Security Group (Layer 4 Firewall) to allow all traffic inbound
 - Install SQL Server and Create Vulnerabilities
 - Remote Into the VM
@@ -63,6 +73,9 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h1/>
 ---
 
 <h2/>Azure Active Directory Overview (Users, Groups, and Access Management)<h2/>
+
+![Untitled](https://user-images.githubusercontent.com/109401839/230747442-f0a1831d-1cf0-4895-b335-372314cd5d51.png)
+
 
 <h3>Actions and Observations</h3>
 
