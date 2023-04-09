@@ -88,10 +88,18 @@ It will show as a disk file under "This PC" side panel:
 
 ![mstsc_Kc9i9HCW3n](https://user-images.githubusercontent.com/109401839/230749050-cdeedde3-6773-48a1-852b-415ea114cfc6.png)
 
-
 ![mstsc_sGtz3qU3M2](https://user-images.githubusercontent.com/109401839/230749062-0bd9eaeb-9c0d-43c2-93a5-c9641bf2285e.png)
 
 ''' Select "Mixed Mode", this is important becayse with Windows Authentication Mode, we will only be able to login with an online acount, where as with a mixed mode, we can login online and locally into the SQL Server. '''
+
+Add current user, and enter your password. 
+
+Now Finish Install ! Now we can connect to our SQL Database.  
+
+Next we will download [Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
+
+![image](https://user-images.githubusercontent.com/109401839/230749437-dfc8f934-0360-4bc8-949f-a99371c0ba40.png)
+
 
 - Enable logging for SQL Server to be ported into Windows Event Viewer 
 - Test SQL logging to make sure it’s working properly
