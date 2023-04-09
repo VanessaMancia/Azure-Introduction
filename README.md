@@ -50,10 +50,14 @@ Did it work?
 
 No it didnt because we need to remote in, and change the firewall setting within the VM as well. 
 
+- Remote Into the VM
+
 Now remote in, on Windows 10 we will use  "Remote Desktop Connection" 
 
 ![e](https://i.imgur.com/8RQ9xpu.png)
 
+- Turn off Windows Firewall
+ 
 Once you are logged in, search "wf.msc" in the start menu to execute the program "Windows Defender Firewall Advanced Security.
 Click on "Windows Defender Firewall Properties" 
 On each tab, turn off the "Firewall State" 
@@ -65,11 +69,30 @@ Now observe the changes in CMD:
 
 ![image](https://user-images.githubusercontent.com/109401839/230748490-8588cf7e-e3b4-4739-befd-f4695ba665ce.png)
 
-- Install SQL Server and Create Vulnerabilities
-- Remote Into the VM
-- Turn off Windows Firewall
+
 - Install SQL Server Evaluation
+
+[Download here](https://www.microsoft.com/en-us/evalcenter/download-sql-server-2022)
+
+Install .exe file, Download Media, ISO option, Open Folder, and Mount Media
+
+It will show as a disk file under "This PC" side panel: 
+
+![image](https://user-images.githubusercontent.com/109401839/230748771-4fd4e778-626d-4baa-8403-b1acf1389bdb.png)
+
+![image](https://user-images.githubusercontent.com/109401839/230748852-edba2194-ebb1-4e15-932f-243d6cce6fac.png)
+
 - Install SSMS (SQL Server Management Studio)
+
+![sql install](https://user-images.githubusercontent.com/109401839/230748997-ad8f84d1-9bf7-4125-b7e5-0cd2f490b62b.png)
+
+![mstsc_Kc9i9HCW3n](https://user-images.githubusercontent.com/109401839/230749050-cdeedde3-6773-48a1-852b-415ea114cfc6.png)
+
+
+![mstsc_sGtz3qU3M2](https://user-images.githubusercontent.com/109401839/230749062-0bd9eaeb-9c0d-43c2-93a5-c9641bf2285e.png)
+
+''' Select "Mixed Mode", this is important becayse with Windows Authentication Mode, we will only be able to login with an online acount, where as with a mixed mode, we can login online and locally into the SQL Server. '''
+
 - Enable logging for SQL Server to be ported into Windows Event Viewer 
 - Test SQL logging to make sure it’s working properly
 
