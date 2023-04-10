@@ -13,8 +13,6 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
 
 - VM Windows 10 (21H2)
 
-<div>
-
 <h2>Resources & SQL Server Vulnerabilties<h2>
 
 <details close>
@@ -149,8 +147,6 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
 
 - Here we can see the failed login attempt and the reason. That concludes the first lab. 
 
-<div>
-
 <h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
 
 <details close>
@@ -203,8 +199,6 @@ The ultimate goal of this lab is to differentiate between false negatives, false
 <h3>Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
 
 <details close>
-
----
 
 ---
 
@@ -311,7 +305,9 @@ Dave is now able view the resource group and create further resoruces in the gro
  
  ![image](https://user-images.githubusercontent.com/109401839/230803808-2d32b1ba-4312-4cc9-99a3-26d158587e0f.png)
 
-*Welcome to Cybersecurity*, your journey starts here! 
+```Be sure to delete your resources```
+
+That concludes the three part labs series, *Welcome to Cybersecurity*, your journey starts here! 
 
 On our next set of [labs](https://github.com/fnabeel/Logging-and-Monitoring), we will go over Logging and Monitoring. 
 
