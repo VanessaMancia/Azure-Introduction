@@ -14,6 +14,7 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
 - VM Windows 10 (21H2)
 
 <h2>Resources & SQL Server Vulnerabilties<h2>
+Faris
 
 <details close>
 
@@ -151,6 +152,7 @@ Password: ```LabTest12345```` (This is what we used, you can set any password bu
 - Here we can see the failed login attempt and the reason. That concludes the first lab. 
 
 <h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
+Vanessa
 
 <details close>
 
@@ -200,6 +202,7 @@ The ultimate goal of this lab is to differentiate between false negatives, false
 <div>
 
 <h3>Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
+Faris
 
 <details close>
 
