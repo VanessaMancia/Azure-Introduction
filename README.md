@@ -95,6 +95,9 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
 
 - Select "Mixed Mode", this is important becayse with Windows Authentication Mode, we will only be able to login with an online acount, where as with a mixed mode, we can login online and locally into the SQL Server.
 
+Default Username: ```sa```
+Password: ```LabTest12345```` (This is what we used, you can set any password but document it.) 
+
 - Add current user, and enter your password. 
 
 - Now Finish Install ! Now we can connect to our SQL Database.  
