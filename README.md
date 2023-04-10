@@ -1,28 +1,29 @@
 ![image](https://user-images.githubusercontent.com/109401839/230745596-57cee9bd-687c-427d-b0db-d1080df77f7e.png)
 
-<h1>Azure Preparation </h1>
+# Azure Preparation
 
-<h3> We will create our Subscription and Resources, then go over Failed Authentication and Log Observation, and finally
-Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
+### We will create our Subscription and Resources, then go over Failed Authentication and Log Observation, and finally
+Azure Active Directory Overview (Users, Groups, and Access Management)
 
-<b> Environments and Technologies Used <b>
+#### Environments and Technologies Used 
 
 - Microsoft Azure
 
-<h3> Operating Systems Used </h3>
+### Operating Systems Used
 
 - VM Windows 10 (21H2)
 
-<h2>Resources & SQL Server Vulnerabilties<h2>
+## Resources & SQL Server Vulnerabilties
+
 Faris
 
 <details close>
 
----
+<div>
 
 </summary>
 
-<b> Actions and Observations<b>
+#### Actions and Observations<b>
 
 - Create Windows 10 Pro Virtual Machine
 - Name the Resource Group: RG-Cyber-Lab
@@ -151,7 +152,8 @@ Password: ```LabTest12345```` (This is what we used, you can set any password bu
 
 - Here we can see the failed login attempt and the reason. That concludes the first lab. 
 
-<h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
+## Precursor to Security Operations (Failed Authentication and Log Observation)
+
 Vanessa
 
 <details close>
