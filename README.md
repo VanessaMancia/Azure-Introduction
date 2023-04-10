@@ -1,27 +1,31 @@
 ![image](https://user-images.githubusercontent.com/109401839/230745596-57cee9bd-687c-427d-b0db-d1080df77f7e.png)
 
-<h1>Azure Preparation </h1>
+# Azure Preparation
 
-<h3> We will create our Subcription and Resources, then go over Failed Authentication and Log Observation , and finally
-Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
+### We will create our Subscription and Resources, then go over Failed Authentication and Log Observation, and finally
+Azure Active Directory Overview (Users, Groups, and Access Management)
 
-<b> Environments and Technologies Used <b>
+#### Environments and Technologies Used 
 
 - Microsoft Azure
+- SQL Server
+- Event Viewer
 
-<h3> Operating Systems Used </h3>
+### Operating Systems Used
 
-- VM Windows 10 (21H2)
+- VM Windows 10 PRO (21H2)
 
-<h2>Resources & SQL Server Vulnerabilties<h2>
+## Resources & SQL Server Vulnerabilties
+
+Faris
 
 <details close>
 
----
+<div>
 
 </summary>
 
-<b> Actions and Observations<b>
+#### Actions and Observations<b>
 
 - Create Windows 10 Pro Virtual Machine
 - Name the Resource Group: RG-Cyber-Lab
@@ -32,18 +36,18 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
 
 ![hjl0rzkf](https://user-images.githubusercontent.com/109401839/230747449-be2118b3-a451-4d32-a756-d4082055ae31.png)
 
-- Now, double check the VM settings and create ! 
+- Now, double-check the VM settings and create! 
 
 ![image](https://user-images.githubusercontent.com/109401839/230747537-211a32a7-9525-4572-a455-0a250278c604.png)
 
 - Configure Network Security Group (Layer 4 Firewall) to allow all traffic inbound
 
-- A mini firewall that will be configured for our virutal machine to allow all traffic in. We want to make this firewall look enticing to allow threat actors such as hackers, bots , and attackers to try to get into our virtual machine. 
+- A mini firewall that will be configured for our virtual machine to allow all traffic in. We want to make this firewall look enticing to allow threat actors such as hackers, bots, and attackers to try to get into our virtual machine. 
 
-- In resource groups, we will go inside it, we can see all the things associated with the VM being created. 
+- In resource groups, we will go inside it, and we can see all the things associated with the VM being created. 
 - We will edit, the network security group, either by search or in the resource groups. 
-- Based on the traffic coming into the network we can see the priorty categorised in Azzure based on the set rules/protocols. 
-- Create Inbound Security Rule , Any, Name it "DangerAllInBound" 
+- Based on the traffic coming into the network we can see the priority categorised in Azzure based on the set rules/protocols. 
+- Create Inbound Security Rule, Any, Name it "DangerAllInBound" 
 
 ![nsg danger inbound](https://user-images.githubusercontent.com/109401839/230748062-20cb8a7d-768c-4d8b-b548-dad98fdef095.png)
 
@@ -52,7 +56,7 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
 
 ![ping](https://i.imgur.com/ZnVQuDB.png)
 
-- No it didnt because we need to remote in, and change the firewall setting within the VM as well. 
+- No it didn't because we need to remote in and change the firewall setting within the VM as well. 
 
 - Remote Into the VM
 
@@ -79,7 +83,7 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
 
 - Install .exe file, Download Media, ISO option, Open Folder, and Mount Media
 
-- It will show as a disk file under "This PC" side panel: 
+- It will show as a disk file under the "This PC" side panel: 
 
 ![image](https://user-images.githubusercontent.com/109401839/230748771-4fd4e778-626d-4baa-8403-b1acf1389bdb.png)
 
@@ -93,22 +97,22 @@ Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
 
 ![mstsc_sGtz3qU3M2](https://user-images.githubusercontent.com/109401839/230749062-0bd9eaeb-9c0d-43c2-93a5-c9641bf2285e.png)
 
-- Select "Mixed Mode", this is important becayse with Windows Authentication Mode, we will only be able to login with an online acount, where as with a mixed mode, we can login online and locally into the SQL Server.
+- Select "Mixed Mode", this is important because, with Windows Authentication Mode, we will only be able to log in with an online account, whereas, with a mixed mode, we can log in online and locally into the SQL Server.
 
 Default Username: ```sa```
 Password: ```LabTest12345```` (This is what we used, you can set any password but document it.) 
 
-- Add current user, and enter your password. 
+- Add your current user, and enter your password. 
 
-- Now Finish Install ! Now we can connect to our SQL Database.  
+- Now Finish Install! Now we can connect to our SQL Database.  
 
-- Next we will download [Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
+- Next, we will download [Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
 ![image](https://user-images.githubusercontent.com/109401839/230749437-dfc8f934-0360-4bc8-949f-a99371c0ba40.png)
 
 ![image](https://user-images.githubusercontent.com/109401839/230749591-15fffab9-3651-418b-8694-bd763492a9fb.png)
 
-[Configure](https://learn.microsoft.com/en-us/sql/relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log?view=sql-server-ver16) the audit object access setting in Windows using auditpol
+[Configure](https://learn.microsoft.com/en-us/sql/relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log?view=sql-server-ver16) the audit object access setting in Windows using audit-pol
 
 - Enable logging for SQL Server to be ported into Windows Event Viewer 
 
@@ -116,7 +120,7 @@ Password: ```LabTest12345```` (This is what we used, you can set any password bu
 
 - From the Start menu, navigate to Command Prompt, and then select Run as administrator.
 
-- If the User Account Control dialog box opens, select Continue.
+- If the User Account Control dialogue box opens, select Continue.
 
 - Execute the following statement to enable auditing from SQL Server.
 
@@ -124,7 +128,7 @@ Password: ```LabTest12345```` (This is what we used, you can set any password bu
 
 - Copy
 
-```auditpol /set /subcategory:"application generated" /success:enable /failure:enable```
+```audit-pol /set /subcategory: "application generated" /success:enable /failure:enable```
 
 - Close the command prompt window.
 
@@ -138,7 +142,7 @@ Password: ```LabTest12345```` (This is what we used, you can set any password bu
 
 - Restart SQL Management, Disconnect Connection, Reconnect, and Choose SQL Managements Authentication Method. 
 
-- Now, Intentionally enter the wrong user name and password to do a failed login attempt. 
+- Now, Intentionally enter the wrong username and password to do a failed login attempt. 
 
 ![image](https://user-images.githubusercontent.com/109401839/230749821-c108d8bb-e77e-4826-9b93-0a6f2afde4f4.png)
 
@@ -150,7 +154,9 @@ Password: ```LabTest12345```` (This is what we used, you can set any password bu
 
 - Here we can see the failed login attempt and the reason. That concludes the first lab. 
 
-<h2/>Precursor to Security Operations (Failed Authentication and Log Observation)<h2/>
+## Precursor to Security Operations (Failed Authentication and Log Observation)
+
+Vanessa
 
 <details close>
 
@@ -158,7 +164,7 @@ Password: ```LabTest12345```` (This is what we used, you can set any password bu
 
 </summary>
 
-We will create a VM in the cloud that will be our target of attack, and we will observe logs and see what they look like. 
+We will create a VM in the cloud that will be our target of the attack, and we will observe logs and see what they look like. 
 The ultimate goal of this lab is to differentiate between false negatives, false positives, true positives, and true negatives. 
   
 <b>Actions and Observations<b>
@@ -167,11 +173,11 @@ The ultimate goal of this lab is to differentiate between false negatives, false
 
 ![OUTSIDE](https://user-images.githubusercontent.com/112146207/230785143-b12ea9d9-8f3d-4fca-a73b-3d54374c3611.png)
 
-```Now we have to name the VNet Lab-VNet-Attacker```
+``` Now we have to name the VNet Lab-VNet-Attacker```
 
 ![image](https://user-images.githubusercontent.com/112146207/230785775-a4c5d027-71cd-4341-8927-faa552ff0cd4.png)
 
-- First thing we will do is get the attack-VM public IP adddress. Then go to remote desktop connection and enter in your attack VM information. 
+- First thing we will do is get the attack-VM public IP address. Then go to the remote desktop connection and enter your attack VM information. 
 
 ![image](https://user-images.githubusercontent.com/112146207/230786468-787b9479-4b0b-42b4-beb0-f627f6c02125.png)
 
@@ -185,21 +191,22 @@ The ultimate goal of this lab is to differentiate between false negatives, false
 
 ![image](https://user-images.githubusercontent.com/112146207/230790854-d6bd81a6-4629-4a4d-ab39-681c7b013451.png)
 
-- After this we will install SSMS within attack-VM and generate some failed MS SQL Auth logs against windows-VM.
+- After this, we will install SSMS within attack-VM and generate some failed MS SQL Auth logs against windows-VM.
 - Enter the wrong password 5 times
 
 ![image](https://user-images.githubusercontent.com/112146207/230792205-ad1cf545-267b-43ea-9bf0-8ecb72dde3ef.png)
 
-- Log out of the attack-VM, and now we are back into our own computer. 
-- From our own computer we will RDP back into our windows-vm. 
+- Log out of the attack VM, and now we are back into our computer. 
+- From our computer, we will RDP back into our windows-vm. 
 - We will inspect the failures and successes (Security log for RDP, Application log for SQL).
-- It's important to also take note of EventIDs, messaging, source IP Addresses etc..
+- It's important to also take note of EventIDs, messaging, source IP Addresses etc...
 
 ![uuu](https://user-images.githubusercontent.com/112146207/230796726-abf6a180-56d0-4428-9952-8eee097c8147.png)
 
 <div>
 
 <h3>Azure Active Directory Overview (Users, Groups, and Access Management)<h3>
+Faris
 
 <details close>
 
@@ -212,9 +219,9 @@ The ultimate goal of this lab is to differentiate between false negatives, false
 <b>Actions and Observations<b>
 
 - Configure and Observe Tenant-Level Global Reader
-1. Create user in Active Directory, we will name the user "globalreaderjohn"
-Then we will select the auto password generate option, Maxo1396" 
-```It will be different for you```
+1. Create a user in Active Directory, we will name the user "globalreaderjohn"
+Then we will select the auto password to generate the option, Maxo1396" 
+```It will be different for you``
 
 ![image](https://user-images.githubusercontent.com/109401839/230799438-00d3e9fe-4348-4052-9995-6d6895f6f283.png)
 
@@ -226,27 +233,27 @@ Then we will select the auto password generate option, Maxo1396"
 
 ![msedge_Y3BrhP8v9T](https://user-images.githubusercontent.com/109401839/230799861-29ebd5fd-4b1d-445f-a9da-abfd1056a726.png)
 
-Be sure to copy your user's "User Principal Name" ,  for us that is ```globalreaderjohn@fnabeelpm.onmicrosoft.com```
+Be sure to copy your user's "User Principal Name",  for us that is ```globalreaderjohn@fnabeelpm.onmicrosoft.com```
 
-- In a new browser/incognito, log in as globalreaderjohn and observe result of being a Tenant Level “Global Reader”
+- In a new browser/incognito, log in as globalreaderjohn and observe the result of being a Tenant Level “Global Reader”
 
- [Log into Azure](http://portal.azure.com/) 
+ [Login to Azure](http://portal.azure.com/) 
 
 ![msedge_HqzxFbf0iN](https://user-images.githubusercontent.com/109401839/230799958-e166ab3b-f43a-4ffc-9042-c836cf5c3ec2.png)
 
- Azure will prompt you to change your auto-generated password, for us we changed it to ```LabTest123456``` , feel free to use anything but be sure to remember it. 
+ Azure will prompt you to change your auto-generated password, for us we changed it to ```LabTest123456```, feel free to use anything but be sure to remember it. 
 
-Once you are logged into Azure, notice you can not see anything in your subscription page, however you are able to view all avaialble users. 
+Once you are logged into Azure, notice you can not see anything on your subscription page, however, you can view all available users. 
 
-Due to your role, as Global Reader. I can view users overview, however I am not able to make changes or reset passwords. 
+Due to your role, as Global Reader. I can view users' overviews, however, I am not able to make changes or reset passwords. 
 
 ![image](https://user-images.githubusercontent.com/109401839/230800090-ab7e025f-079f-41f5-a8f4-10cf7dbd5676.png)
 
-This is because we have given RBAC (Role-Based Access Control) and enforced Least Priviledges so John can only do his job, Read. 
+This is because we have given RBAC (Role-Based Access Control) and enforced the Least Privileges so John can only do his job, Read. 
 
 - Close browser/incognito when satisfied
 
-- Back in main browser, create another user within AAD  (username: subreaderjane)
+- Back in the main browser, create another user within AAD  (username: subreaderjane)
 
 - Configure and Observer Subscription Reader
 
@@ -256,21 +263,21 @@ This is because we have given RBAC (Role-Based Access Control) and enforced Leas
 
 - Assign Subscription-Level Reader 
 
-This maybe called something different for you, for me ```Azure subscription 1``` and you can find this under ```Subscriptions```. 
+This may be called something different for you, for me ``` Azure subscription 1``` and you can find this under ```Subscriptions```. 
 
-Now, Enter the Access Control (IAM) and give Jane her deserved role. 
+Now, Enter the Access Control (IAM) and give Jane the deserved role. 
 
 ![image](https://user-images.githubusercontent.com/109401839/230800962-a70cbdaf-c686-41ec-9313-f8dc9cb0fd9e.png)
 
 ![msedge_UUzHPizmTA](https://user-images.githubusercontent.com/109401839/230800551-c809f8b7-975f-4a3b-8761-ef7e7c6fe5fb.png)
 
-- In a new browser/incognito, log in as subreaderjane and observe result of being a Subscription Level “Global Reader”
+- In a new browser/incognito, log in as subreaderjane and observe the result of being a Subscription Level “Global Reader”
 
-Again, you will be prompted to change your password, document it. 
+Again, you will be prompted to change your password and document it. 
 
-Go to resource groups and notice you are able to see the resources in there and even under subscriptions. 
+Go to resource groups and notice you can see the resources in there and even under subscriptions. 
 
-Lets try to delete a resource group now, we should not be able to do so... 
+Let us try to delete a resource group now, we should not be able to do so... 
 
 ![image](https://user-images.githubusercontent.com/109401839/230801715-c9537447-9f66-4f22-8d33-19eab3074bd2.png)
 
@@ -278,13 +285,13 @@ Did it delete? YIKES.
 
 ![image](https://user-images.githubusercontent.com/109401839/230801752-80f0c485-cf6b-40d5-ac6d-de5b9cedf301.png)
 
-It did not delete ! Jane does not have the priveldges to create or delete. Only a subscription level reader. We can not actually change anything. 
+It did not delete! Jane does not have the privileges to create or delete. Only a subscription-level reader. We can not change anything. 
 
 - Close browser/incognito when satisfied
 
 - Configure and Observe Resource Group Contributor (like an admin)
 
-- Back in main browser, create another user within AAD  (username: rgcontributordave)
+- Back in the main browser, create another user within AAD  (username: rgcontributordave)
 
 Auto-generated password ```Fayo1701```
 
@@ -296,7 +303,7 @@ Auto-generated password ```Fayo1701```
 
 ![image](https://user-images.githubusercontent.com/109401839/230802793-5cd508ee-80f4-4ec5-a550-a9bcfee016b6.png)
 
-- In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader
+- In a new browser/incognito, log in as rgcontributordave and observe the result of being a Subscription Level Reader
  
 ![msedge_0h9H4b5cvQ](https://user-images.githubusercontent.com/109401839/230802957-c2564141-5e21-4f06-8566-70b1464c40ce.png)
 
@@ -304,13 +311,13 @@ Auto-generated password ```Fayo1701```
 
 ![image](https://user-images.githubusercontent.com/109401839/230803072-730eeeb8-3051-4173-9a19-44d513cddb56.png)
 
-Dave is now able view the resource group and create further resoruces in the group such as Storage. 
+Dave is now able to view the resource group and create further resources in the group such as Storage. 
  
  ![image](https://user-images.githubusercontent.com/109401839/230803808-2d32b1ba-4312-4cc9-99a3-26d158587e0f.png)
 
 ```Be sure to delete your resources```
 
-That concludes the three part labs series, *Welcome to Cybersecurity*, your journey starts here! 
+That concludes the three-part labs series, *Welcome to Cybersecurity*, your journey starts here! 
 
 On our next set of [labs](https://github.com/fnabeel/Logging-and-Monitoring), we will go over Logging and Monitoring. 
 
