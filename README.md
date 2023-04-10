@@ -163,7 +163,7 @@ The ultimate goal of this lab is to differentiate between false negatives, false
   
 <b>Actions and Observations<b>
 
-- We are creating an attack vm the goal is to have a different region so it looks like a threat is attacking our previous vm. 
+- We are creating an attack vm the goal is to have a different region so it looks like a threat is attacking our windows-VM. 
 
 ![OUTSIDE](https://user-images.githubusercontent.com/112146207/230785143-b12ea9d9-8f3d-4fca-a73b-3d54374c3611.png)
 
