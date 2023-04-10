@@ -294,11 +294,24 @@ Auto-generated password ```Fayo1701```
 - Create a new resource group called “Permissions-Tester”
 
 - Assign Resource Group-level Contributor
+
 - For our resource group (RG-Cyber-Lab), assign Contributor Permissions
+
+![image](https://user-images.githubusercontent.com/109401839/230802793-5cd508ee-80f4-4ec5-a550-a9bcfee016b6.png)
+
 - In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader
+ 
+![msedge_0h9H4b5cvQ](https://user-images.githubusercontent.com/109401839/230802957-c2564141-5e21-4f06-8566-70b1464c40ce.png)
+
 - Observe the result of being a Resource Group Level Contributor
+
+![image](https://user-images.githubusercontent.com/109401839/230803072-730eeeb8-3051-4173-9a19-44d513cddb56.png)
+
+Dave is now able view the resource group and create further resoruces in the group such as Storage. 
+ 
+ ![image](https://user-images.githubusercontent.com/109401839/230803808-2d32b1ba-4312-4cc9-99a3-26d158587e0f.png)
 
 *Welcome to Cybersecurity*, your journey starts here! 
 
-On our next set of [labs](https://github.com/fnabeel/Logging-and-Monitoring), we woll go over Logging and Monitoring. 
+On our next set of [labs](https://github.com/fnabeel/Logging-and-Monitoring), we will go over Logging and Monitoring. 
 
