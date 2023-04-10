@@ -8,10 +8,12 @@ Azure Active Directory Overview (Users, Groups, and Access Management)
 #### Environments and Technologies Used 
 
 - Microsoft Azure
+- SQL Server
+- Event Viewer
 
 ### Operating Systems Used
 
-- VM Windows 10 (21H2)
+- VM Windows 10 PRO (21H2)
 
 ## Resources & SQL Server Vulnerabilties
 
